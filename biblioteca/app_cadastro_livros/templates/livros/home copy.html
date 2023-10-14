@@ -1,0 +1,16 @@
+{% extends 'livros/base.html' %}
+{% block conteudo %}
+
+<form action="{% url 'listagem_livros' %}" method="post">
+    {% csrf_token %}
+    <div style="text-align: center;" class="container">
+
+        <h1>Cadastar</h1>
+        Titulo <input name="titulo" class="form-control-sm" type="text">
+        Autor <input name="autor" class="form-control-sm" type="text">
+        Quantidade <input name="quantidade" class="form-control-sm" type="number">
+        <button> Cadastrar</button>
+    </div>
+</form>
+
+{% endblock %}

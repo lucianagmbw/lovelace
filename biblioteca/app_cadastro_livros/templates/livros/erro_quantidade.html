@@ -1,0 +1,12 @@
+{% extends 'livros/base.html' %}
+{% block conteudo %}
+
+    <div class="container text-center mt-5">
+        <!-- Conteúdo que você deseja centralizar -->
+        <h1>Ops!</h1>
+        <p>Não é possível cadastrar quantidade menor ou igual a zero.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Voltar para a Página Inicial</a>   
+    </div>
+
+   
+    {% endblock %}
