@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Buscar Livro por Autor</title>
-</head>
-<body>
-    <h1>Buscar Livro por Autor</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Buscar</button>
-    </form>
-</body>
-</html>
+{% extends 'livros/base.html' %}
+{% block conteudo %}
+<div class="row justify-content-center mt-4">
+    <div class="col-md-4 text-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Voltar para a Página Inicial</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-4">
+            <h1>Buscar Livro por Autor</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+            <a href="{% url 'home' %}" class="btn btn-primary">Voltar para a Página Inicial</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
